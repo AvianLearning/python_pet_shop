@@ -58,6 +58,12 @@ def add_pet_to_stock(pet_shop_dict, new_pet):
     pets.append(new_pet)
 
 
+def get_customer_cash(customer_list):
+    for customer in customer_list:
+        return customer_list['cash']
+       
+
+
 
         
 
