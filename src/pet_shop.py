@@ -44,6 +44,17 @@ def find_pet_by_name(pet_shop_dict, name):
     for pet in pets:
         if pet['name'] == name:
             return pet
+
+
+def remove_pet_by_name(pet_shop_dict, name):
+    pets = pet_shop_dict['pets']
+    for pet in pets:
+        if pet['name'] == name:
+            pets.remove(pet)
+
+
+
+
         
 
 
