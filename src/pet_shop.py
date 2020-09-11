@@ -40,7 +40,13 @@ def get_pets_by_breed(pet_shop_dict, breed):
     
 
 def find_pet_by_name(pet_shop_dict, name):
-    p
+    pets = pet_shop_dict['pets']
+    for pet in pets:
+        if pet['name'] == name:
+            return pet
+        
+
+
 
 
 
