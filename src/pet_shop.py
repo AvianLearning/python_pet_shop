@@ -53,6 +53,10 @@ def remove_pet_by_name(pet_shop_dict, name):
             pets.remove(pet)
 
 
+def add_pet_to_stock(pet_shop_dict, new_pet):
+    pets = pet_shop_dict['pets']
+    pets.append(new_pet)
+
 
 
         
