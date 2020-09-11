@@ -13,4 +13,9 @@ def add_or_remove_cash(pet_shop_dict, cash_amount):
     pet_shop_dict["admin"]["total_cash"] = get_total_cash(pet_shop_dict) + cash_amount
     
 
+def get_pets_sold(pet_shop_dict):
+    sold = pet_shop_dict["admin"]["pets_sold"]
+    return sold
+
+
 
