@@ -39,17 +39,17 @@ def get_pets_by_breed(pet_shop_dict, breed):
     return breeds_found
     
 
-def find_pet_by_name(pet_shop_dict, name):
+def find_pet_by_name(pet_shop_dict, pet_name):
     pets = pet_shop_dict['pets']
     for pet in pets:
-        if pet['name'] == name:
+        if pet['name'] == pet_name:
             return pet
 
 
-def remove_pet_by_name(pet_shop_dict, name):
+def remove_pet_by_name(pet_shop_dict, pet_name):
     pets = pet_shop_dict['pets']
     for pet in pets:
-        if pet['name'] == name:
+        if pet['name'] == pet_name:
             pets.remove(pet)
 
 
@@ -64,7 +64,8 @@ def get_customer_cash(customer):
 
 def remove_customer_cash(customer, amount_to_deduct):
     customer['cash'] = get_customer_cash(customer) - amount_to_deduct
-    return customer['cash']
+    # return customer['cash']
+    get_customer_cash(customer)
 
 
 def get_customer_pet_count(customer):
@@ -81,19 +82,14 @@ def customer_can_afford_pet(customer, new_pet):
         return True
     else:
         return False
+
+
+def sell_pet_to_customer(pet_shop_dict, pet, customer):
+    add_pet_to_customer(customer, pet)
+    remove_customer_cash(customer,pet['price'])
+    add_or_remove_cash(pet_shop_dict, pet['price'])
+    increase_pets_sold(pet_shop_dict, 1)
     
-       
-
-
-
-        
-
-
-
-
-
-        
-
 
 
 
